@@ -5,3 +5,7 @@ p{
 .scratch-out{
     text-decoration: line-through;
 }
+
+.task{
+    margin-bottom: 20px;
+}
