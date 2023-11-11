@@ -1,4 +1,3 @@
-// import { render } from "ejs";
 import express from "express";
 import {dirname} from "path";
 import { fileURLToPath } from "url";
@@ -6,23 +5,9 @@ import { fileURLToPath } from "url";
 const app = express();
 const port = 3000;
 const dir = dirname(fileURLToPath(import.meta.url));
-// let taskArray = [];
 
 app.use(express.static("static"));
 app.use(express.urlencoded({extended:true}));
-
-
-// app.post("/submit", (req,res)=>{
-//     let text  = req.body.newTask;
-//     if (text != undefined && text != ""){
-//     taskArray.push(text);
-//     console.log(taskArray);
-//     res.redirect("/");
-//     }
-//     else{
-//         res.redirect('/')
-//     }
-// });
 
 app.get('/',(req,res)=>{
     res.sendFile(dir+'/index.html');
